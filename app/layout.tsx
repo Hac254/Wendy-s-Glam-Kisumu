@@ -35,12 +35,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const particles = Array.from({ length: 41 });
+
   return (
     <html lang="en" className="bg-background" suppressHydrationWarning>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
-          {process.env.NODE_ENV === 'production' && <Analytics />}
+          <div className="background" aria-hidden="true">
+            {particles.map((_, index) => (
+              <span key={index} />
+            ))}
+          </div>
+
+          <div className="relative z-10">
+            {children}
+            {process.env.NODE_ENV === 'production' && <Analytics />}
+          </div>
         </ThemeProvider>
       </body>
     </html>
