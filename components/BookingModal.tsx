@@ -86,15 +86,18 @@ Looking forward to getting pampered by you! ✨
       // Log for debugging
       console.log('Booking submitted:', data);
 
-      // Open WhatsApp in new tab
-      window.open(whatsappLink, '_blank');
+      // Try opening in a new tab first. If blocked, fall back to same-tab navigation.
+      const popup = window.open(whatsappLink, '_blank', 'noopener,noreferrer');
+      if (!popup) {
+        window.location.href = whatsappLink;
+      }
 
       // Reset form and close modal
       reset();
       onClose();
 
-      // Redirect to thank you page
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      // Redirect to thank you page after a short delay
+      await new Promise((resolve) => setTimeout(resolve, 600));
       router.push('/thankyou');
     } catch (error) {
       console.error('Booking error:', error);
