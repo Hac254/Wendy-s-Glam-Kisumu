@@ -21,14 +21,14 @@ const bookingSchema = z.object({
 type BookingFormData = z.infer<typeof bookingSchema>;
 
 const services = [
-  'Gel Nails',
-  'Acrylic Nails',
-  'Nail Art Design',
-  'French Manicure',
-  'Pedicure',
-  'Nail Repair',
-  'Ombre Nails',
-  'Luxury Spa',
+  'Nail Services',
+  'Manicures',
+  'Pedicures',
+  'Waxing',
+  'Facials',
+  'Lash Services',
+  'Hair Services',
+  'Eyebrow Services',
 ];
 
 const timeSlots = [
@@ -76,7 +76,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
 ${data.notes ? `*Additional Notes:*\n${data.notes}` : ''}
 
-Looking forward to pampering you! ✨
+Looking forward to getting pampered by you Wendy! ✨
       `.trim();
 
       const encodedMessage = encodeURIComponent(messageText);
@@ -129,7 +129,7 @@ Looking forward to pampering you! ✨
               <input
                 {...register('firstName')}
                 type="text"
-                placeholder="John"
+                placeholder="Jane"
                 className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary"
               />
               {errors.firstName && (
@@ -158,7 +158,7 @@ Looking forward to pampering you! ✨
             <input
               {...register('email')}
               type="email"
-              placeholder="john@example.com"
+              placeholder="jane doe@example.com"
               className="w-full px-3 py-2 border border-border rounded-lg bg-card text-foreground placeholder-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary"
             />
             {errors.email && (

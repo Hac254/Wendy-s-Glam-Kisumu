@@ -18,7 +18,7 @@ export default function ThankYouPage() {
         <h1 className="text-4xl font-bold text-foreground mb-4">Booking Confirmed!</h1>
 
         <p className="text-lg text-foreground/70 mb-8">
-          Thank you for booking with Bold Nails Beauty. We&apos;ve sent a confirmation email with all the details about your appointment.
+          Thank you for booking with Wendy's Glam Kisumu. We&apos;ve received a confirmation message with all the details about your appointment.
         </p>
 
         <div className="bg-card rounded-lg p-6 mb-8 border border-border text-left">
@@ -26,7 +26,7 @@ export default function ThankYouPage() {
           <ul className="space-y-3 text-foreground/70 text-sm">
             <li className="flex items-start gap-3">
               <span className="text-primary font-bold">✓</span>
-              <span>Check your email for appointment confirmation</span>
+              <span>Check your WhatsApp messages for appointment confirmation</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-primary font-bold">✓</span>
