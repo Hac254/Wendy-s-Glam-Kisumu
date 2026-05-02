@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import { X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const galleryImages = [
   {
@@ -273,6 +272,22 @@ const galleryImages = [
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const currentImage = galleryImages[currentIndex];
+  const selectedImageData = galleryImages.find((img) => img.id === selectedImage);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) =>
+      prev === galleryImages.length - 1 ? 0 : prev + 1
+    );
+  };
 
   return (
     <section id="gallery" className="py-20 bg-background">
@@ -286,34 +301,85 @@ export function Gallery() {
           </p>
         </div>
 
-        {/* Masonry Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-max">
-          {galleryImages.map((image, index) => (
-            <div
-              key={image.id}
-              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 aspect-square cursor-pointer"
-              onClick={() => setSelectedImage(image.id)}
-            >
-              {/* Placeholder - shows gradient background */}
-              <div className="w-full h-full bg-gradient-to-br from-primary via-accent to-secondary opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
+        {/* Slideshow Gallery */}
+        <div className="relative max-w-5xl mx-auto">
+          <div
+            className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 to-accent/10 w-full max-w-md mx-auto aspect-[4/5] cursor-pointer shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)]"
+            onClick={() => setSelectedImage(currentImage.id)}
+          >
+            <img
+              src={currentImage.image}
+              alt={currentImage.title}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
 
-              {/* Overlay content */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center group-hover:bg-black/40 transition-all duration-300">
-                <h3 className="text-white font-semibold text-lg text-center group-hover:opacity-100 opacity-0 transition-opacity">
-                  {image.title}
-                </h3>
-                <p className="text-white/80 text-sm mt-2 group-hover:opacity-100 opacity-0 transition-opacity">
-                  {image.category}
-                </p>
-              </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
+
+            <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+              <p className="text-xs uppercase tracking-[0.3em] text-white/70">
+                {currentImage.category}
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold text-white">
+                {currentImage.title}
+              </h3>
+              <p className="mt-2 text-sm text-white/80">
+                Tap to view full image
+              </p>
             </div>
-          ))}
+
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                goToPrevious();
+              }}
+              className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/85 hover:bg-white text-foreground rounded-full p-2 shadow-lg transition-colors"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                goToNext();
+              }}
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/85 hover:bg-white text-foreground rounded-full p-2 shadow-lg transition-colors"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+
+          <div className="mt-8 flex items-center justify-center gap-3 overflow-x-auto pb-2">
+            {galleryImages.map((image, index) => (
+              <button
+                key={image.id}
+                type="button"
+                onClick={() => setCurrentIndex(index)}
+                className={`relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border transition-all ${
+                  index === currentIndex
+                    ? 'scale-105 border-primary shadow-lg'
+                    : 'border-transparent opacity-70 hover:opacity-100'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              >
+                <img
+                  src={image.image}
+                  alt={image.title}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Lightbox Modal */}
         {selectedImage && (
           <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-            <div className="relative max-w-2xl w-full">
+            <div className="relative w-full max-w-lg">
               {/* Close button */}
               <button
                 onClick={() => setSelectedImage(null)}
@@ -324,18 +390,21 @@ export function Gallery() {
               </button>
 
               {/* Image container */}
-              <div className="w-full aspect-square bg-gradient-to-br from-primary via-accent to-secondary rounded-xl overflow-hidden shadow-2xl">
-                {/* Placeholder gradient */}
-                <div className="w-full h-full" />
+              <div className="overflow-hidden rounded-3xl bg-white/5 shadow-2xl ring-1 ring-white/10">
+                <img
+                  src={selectedImageData?.image}
+                  alt={selectedImageData?.title}
+                  className="mx-auto max-h-[70vh] w-full object-contain bg-black/20"
+                />
               </div>
 
               {/* Image info */}
               <div className="mt-4 text-center text-white">
-                <h3 className="text-2xl font-semibold">
-                  {galleryImages.find((img) => img.id === selectedImage)?.title}
+                <h3 className="text-xl font-semibold">
+                  {selectedImageData?.title}
                 </h3>
-                <p className="text-white/70 mt-2">
-                  {galleryImages.find((img) => img.id === selectedImage)?.category}
+                <p className="text-white/70 mt-1 text-sm">
+                  {selectedImageData?.category}
                 </p>
               </div>
             </div>
