@@ -16,10 +16,10 @@ export function Hero({ onBookingClick }: HeroProps) {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-          Wendy&apos;s <span className="text-primary">Glam Kisumu</span>
+          Be Bold,  <span className="text-primary">Be Beautiful</span><u> Be You.</u>
         </h1>
         <p className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-2xl mx-auto text-pretty">
-          Your ultimate destination for premium beauty services in Kisumu. From stunning nails to luxurious skincare, lashes, and more.
+          Welcome to Wendy's Glam Kisumu, Your ultimate destination for premium beauty services. From stunning nails to luxurious skincare, lashes, and more.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
