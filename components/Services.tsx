@@ -5,42 +5,42 @@ import { Button } from '@/components/ui/button';
 const serviceCategories = [
   {
     category: 'Nail Services',
-    icon: '💅',
+    image: 'https://i.ibb.co/yBNpDcSP/image.png',
     subcategories: ['Gel Nails', 'Acrylic Nails', 'Nail Art Design', 'French Manicure', 'Ombre Nails', 'Nail Repair', 'Dip Powder Nails']
   },
   {
     category: 'Manicures',
-    icon: '✨',
+    image: 'https://i.ibb.co/Kz65dMvy/Whats-App-Image-2026-05-02-at-6-49-27-PM-1.jpg',
     subcategories: ['Classic Manicure', 'Gel Manicure', 'Acrylic Extensions', 'Gel Polish', 'Shellac Manicure', 'Spa Manicure']
   },
   {
     category: 'Pedicures',
-    icon: '🌸',
+    image: 'https://i.ibb.co/cST08k7n/Whats-App-Image-2026-05-02-at-6-49-27-PM-4.jpg',
     subcategories: ['Classic Pedicure', 'Gel Pedicure', 'Spa Pedicure', 'Foot Massage', 'Callus Removal', 'Nail Art Pedicure']
   },
   {
     category: 'Waxing',
-    icon: '✨',
+    image: 'https://i.ibb.co/0jdpTqpH/Whats-App-Image-2026-05-02-at-6-49-27-PM-3.jpg',
     subcategories: ['Eyebrow Waxing', 'Full Body Waxing', 'Leg Waxing', 'Arm Waxing', 'Facial Waxing', 'Threading']
   },
   {
     category: 'Facials',
-    icon: '🧖',
+    image: 'https://i.ibb.co/jPFbF57w/image.png',
     subcategories: ['HydraFacial', 'Chemical Peel', 'Acne Treatment', 'Anti-Aging Facial', 'Brightening Facial', 'Moisture Boost Facial']
   },
   {
     category: 'Lash Services',
-    icon: '✨',
+    image: 'https://i.ibb.co/7tsC7cLy/Whats-App-Image-2026-05-02-at-6-49-27-PM.jpg',
     subcategories: ['Eyelash Extensions', 'Lash Lift & Tint', 'Lash Perming', 'Lash Tinting', 'Lash Fill', 'Lash Removal']
   },
   {
     category: 'Hair Services',
-    icon: '💇',
+    image: 'https://i.ibb.co/Hp7bS8nt/Whats-App-Image-2026-05-02-at-6-49-27-PM-6.jpg',
     subcategories: ['Hair Styling', 'Hair Coloring', 'Highlights & Lowlights', 'Keratin Treatment', 'Hair Cutting', 'Blowout']
   },
   {
     category: 'Eyebrow Services',
-    icon: '👁️',
+    image: 'https://i.ibb.co/2JNspDZ/Whats-App-Image-2026-05-02-at-6-49-27-PM-2.jpg',
     subcategories: ['Eyebrow Threading', 'Eyebrow Microblading', 'Eyebrow Tinting', 'Eyebrow Shaping', 'Eyebrow Lamination', 'Eyebrow Design']
   },
 ];
@@ -49,7 +49,7 @@ const services = serviceCategories.map((cat, idx) => ({
   title: cat.category,
   description: `Premium ${cat.category.toLowerCase()} with expert care and professional products`,
   price: `from KES ${800 + idx * 300}`,
-  icon: cat.icon,
+  image: cat.image,
   subcategories: cat.subcategories,
 }));
 
@@ -86,7 +86,14 @@ export function Services() {
               className="border-border bg-background hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <CardHeader className="pb-3">
-                <div className="text-4xl mb-2">{service.icon}</div>
+                <div className="mb-3 overflow-hidden rounded-xl aspect-[4/3] bg-muted">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
                 <CardTitle className="text-lg text-foreground">{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
