@@ -6,6 +6,11 @@ interface HeroProps {
 }
 
 export function Hero({ onBookingClick }: HeroProps) {
+  const handleViewGallery = () => {
+    const gallerySection = document.getElementById('gallery');
+    gallerySection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <section className="min-h-screen pt-20 flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
@@ -31,6 +36,7 @@ export function Hero({ onBookingClick }: HeroProps) {
           </Button>
           <Button
             variant="outline"
+            onClick={handleViewGallery}
             className="px-8 py-6 rounded-full text-lg font-semibold border-primary text-primary hover:bg-primary/5"
           >
             View Gallery
