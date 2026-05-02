@@ -138,7 +138,7 @@ export function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                <p className="text-foreground/60 text-sm">Opposite Kisumu Polytechnic, Kisumu, Kenya</p>
+                <p className="text-foreground/60 text-sm">The Kisumu National Polytechnic, Kisumu, Kenya</p>
               </div>
             </div>
           </div>
@@ -149,14 +149,14 @@ export function Footer() {
           <h3 className="font-semibold text-foreground mb-4">Find Us</h3>
           <div className="rounded-xl overflow-hidden aspect-video">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.6848486522817!2d34.75897!3d-0.1066904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa5c9a4b9d9d9%3A0x1234567890abcdef!2sKisumu%20Polytechnic!5e0!3m2!1sen!2ske!4v1234567890"
+              src="https://www.google.com/maps?q=The+Kisumu+National+Polytechnic&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowFullScreen=""
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Wendy's Glam Location"
+              title="The Kisumu National Polytechnic Location"
             />
           </div>
         </div>
