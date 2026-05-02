@@ -56,11 +56,14 @@ export function About() {
             </div>
           </div>
 
-          {/* Right side - Visual placeholder */}
+          {/* Right side - Visual */}
           <div className="bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 rounded-2xl aspect-square flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">💅</div>
-              <p className="text-foreground/60 text-lg">Premium Nail Care</p>
+            <div className="w-full h-full p-6">
+              <img
+                src="https://i.ibb.co/KjxxgtK6/image.png"
+                alt="Wendy's Glam logo"
+                className="w-full h-full object-contain rounded-xl"
+              />
             </div>
           </div>
         </div>
