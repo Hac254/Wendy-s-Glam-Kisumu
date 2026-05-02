@@ -38,7 +38,7 @@ export function Navigation({ onBookingClick }: NavigationProps) {
               alt="Wendy's Glam Kisumu" 
               className="h-10 w-10 object-cover rounded-lg"
             />
-            <span className="text-lg font-bold text-primary hidden sm:inline">Wendy&apos;s Glam</span>
+            <span className="text-lg font-bold text-primary hidden sm:inline">Wendy&apos;s Glam Kisumu</span>
           </div>
 
           {/* Desktop Menu */}
