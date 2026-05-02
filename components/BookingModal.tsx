@@ -76,7 +76,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
 ${data.notes ? `*Additional Notes:*\n${data.notes}` : ''}
 
-Looking forward to getting pampered by you Wendy! ✨
+Looking forward to getting pampered by you! ✨
       `.trim();
 
       const encodedMessage = encodeURIComponent(messageText);
