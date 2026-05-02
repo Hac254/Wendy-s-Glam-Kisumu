@@ -6,266 +6,266 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 const galleryImages = [
   {
     id: 1,
-    title: 'Elegant Nail Art',
-    category: 'Design',
+    title: 'Nail Design 01',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/WNSn4zsS/Whats-App-Image-2026-05-02-at-2-23-53-PM.jpg',
   },
   {
     id: 2,
-    title: 'Premium Manicure',
-    category: 'Luxury',
+    title: 'Nail Design 02',
+    category: 'Manicure',
     image: 'https://i.ibb.co/TD9sZq5q/Whats-App-Image-2026-05-02-at-2-23-54-PM-1.jpg',
   },
   {
     id: 3,
-    title: 'Creative Design',
-    category: 'Art',
+    title: 'Nail Design 03',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/s9CzwBSb/Whats-App-Image-2026-05-02-at-2-23-54-PM-2.jpg',
   },
   {
     id: 4,
-    title: 'Glamorous Nails',
-    category: 'Glam',
+    title: 'Nail Design 04',
+    category: 'Gel Nails',
     image: 'https://i.ibb.co/Rph9KRvt/Whats-App-Image-2026-05-02-at-2-23-54-PM.jpg',
   },
   {
     id: 5,
-    title: 'Stunning Finish',
-    category: 'Premium',
+    title: 'Nail Design 05',
+    category: 'Manicure',
     image: 'https://i.ibb.co/MxF2nmww/Whats-App-Image-2026-05-02-at-2-23-55-PM-1.jpg',
   },
   {
     id: 6,
-    title: 'Professional Service',
-    category: 'Salon',
+    title: 'Nail Design 06',
+    category: 'Salon Work',
     image: 'https://i.ibb.co/Q3ZMKP8n/Whats-App-Image-2026-05-02-at-2-23-55-PM-2.jpg',
   },
   {
     id: 7,
-    title: 'Beautiful Design',
-    category: 'Art',
+    title: 'Nail Design 07',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/h1w9659v/Whats-App-Image-2026-05-02-at-2-23-55-PM.jpg',
   },
   {
     id: 8,
-    title: 'Luxe Collection',
-    category: 'Luxury',
+    title: 'Nail Design 08',
+    category: 'Acrylic Nails',
     image: 'https://i.ibb.co/Gfq0wrt4/Whats-App-Image-2026-05-02-at-2-23-56-PM-1.jpg',
   },
   {
     id: 9,
-    title: 'Artistic Nails',
-    category: 'Design',
+    title: 'Nail Design 09',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/cXyrsW0v/Whats-App-Image-2026-05-02-at-2-23-56-PM-2.jpg',
   },
   {
     id: 10,
-    title: 'Elegant Finish',
-    category: 'Premium',
+    title: 'Nail Design 10',
+    category: 'Manicure',
     image: 'https://i.ibb.co/SwtcRkS2/Whats-App-Image-2026-05-02-at-2-23-56-PM-3.jpg',
   },
   {
     id: 11,
-    title: 'Stylish Collection',
-    category: 'Glam',
+    title: 'Nail Design 11',
+    category: 'Gel Nails',
     image: 'https://i.ibb.co/ZRBZw5p9/Whats-App-Image-2026-05-02-at-2-23-56-PM.jpg',
   },
   {
     id: 12,
-    title: 'Perfect Manicure',
-    category: 'Salon',
+    title: 'Nail Design 12',
+    category: 'Salon Work',
     image: 'https://i.ibb.co/xSRPZMqd/Whats-App-Image-2026-05-02-at-2-23-57-PM-1.jpg',
   },
   {
     id: 13,
-    title: 'Creative Expression',
-    category: 'Art',
+    title: 'Nail Design 13',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/bMjWQ2MB/Whats-App-Image-2026-05-02-at-2-23-57-PM-2.jpg',
   },
   {
     id: 14,
-    title: 'Premium Look',
-    category: 'Luxury',
+    title: 'Nail Design 14',
+    category: 'Acrylic Nails',
     image: 'https://i.ibb.co/q3NNjcrB/Whats-App-Image-2026-05-02-at-2-23-57-PM.jpg',
   },
   {
     id: 15,
-    title: 'Nail Perfection',
-    category: 'Design',
+    title: 'Nail Design 15',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/Jw9KQ0xh/Whats-App-Image-2026-05-02-at-2-23-58-PM-1.jpg',
   },
   {
     id: 16,
-    title: 'Gorgeous Finish',
-    category: 'Premium',
+    title: 'Nail Design 16',
+    category: 'Manicure',
     image: 'https://i.ibb.co/3m6C9kCJ/Whats-App-Image-2026-05-02-at-2-23-58-PM-2.jpg',
   },
   {
     id: 17,
-    title: 'Fabulous Nails',
-    category: 'Glam',
+    title: 'Nail Design 17',
+    category: 'Gel Nails',
     image: 'https://i.ibb.co/yB4vW6vk/Whats-App-Image-2026-05-02-at-2-23-58-PM-3.jpg',
   },
   {
     id: 18,
-    title: 'Expert Craftsmanship',
-    category: 'Salon',
+    title: 'Nail Design 18',
+    category: 'Salon Work',
     image: 'https://i.ibb.co/Jj6Mhwjn/Whats-App-Image-2026-05-02-at-2-23-58-PM.jpg',
   },
   {
     id: 19,
-    title: 'Stunning Art',
-    category: 'Art',
+    title: 'Nail Design 19',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/HTPhyYbK/Whats-App-Image-2026-05-02-at-2-23-59-PM-1.jpg',
   },
   {
     id: 20,
-    title: 'Elegant Style',
-    category: 'Luxury',
+    title: 'Nail Design 20',
+    category: 'Acrylic Nails',
     image: 'https://i.ibb.co/NgT6vpY2/Whats-App-Image-2026-05-02-at-2-23-59-PM-2.jpg',
   },
   {
     id: 21,
-    title: 'Chic Design',
-    category: 'Design',
+    title: 'Nail Design 21',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/DDgxnmwS/Whats-App-Image-2026-05-02-at-2-23-59-PM-3.jpg',
   },
   {
     id: 22,
-    title: 'Beauty Perfection',
-    category: 'Premium',
+    title: 'Nail Design 22',
+    category: 'Manicure',
     image: 'https://i.ibb.co/7xPGxTm0/Whats-App-Image-2026-05-02-at-2-23-59-PM.jpg',
   },
   {
     id: 23,
-    title: 'Glamorous Look',
-    category: 'Glam',
+    title: 'Nail Design 23',
+    category: 'Gel Nails',
     image: 'https://i.ibb.co/0j6CLXsz/Whats-App-Image-2026-05-02-at-2-24-00-PM-1.jpg',
   },
   {
     id: 24,
-    title: 'Salon Quality',
-    category: 'Salon',
+    title: 'Nail Design 24',
+    category: 'Salon Work',
     image: 'https://i.ibb.co/chynMR5j/Whats-App-Image-2026-05-02-at-2-24-00-PM-2.jpg',
   },
   {
     id: 25,
-    title: 'Artistic Vision',
-    category: 'Art',
+    title: 'Nail Design 25',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/b49Ldnw/Whats-App-Image-2026-05-02-at-2-24-00-PM-3.jpg',
   },
   {
     id: 26,
-    title: 'Luxury Finish',
-    category: 'Luxury',
+    title: 'Nail Design 26',
+    category: 'Acrylic Nails',
     image: 'https://i.ibb.co/YBFndYDy/Whats-App-Image-2026-05-02-at-2-24-00-PM.jpg',
   },
   {
     id: 27,
-    title: 'Stunning Design',
-    category: 'Design',
+    title: 'Nail Design 27',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/gMf9qS00/Whats-App-Image-2026-05-02-at-2-24-01-PM.jpg',
   },
   {
     id: 28,
-    title: 'Premium Beauty',
-    category: 'Premium',
+    title: 'Nail Design 28',
+    category: 'Manicure',
     image: 'https://i.ibb.co/Xx95HVmY/Whats-App-Image-2026-05-02-at-2-24-02-PM-1.jpg',
   },
   {
     id: 29,
-    title: 'Fabulous Finish',
-    category: 'Glam',
+    title: 'Nail Design 29',
+    category: 'Gel Nails',
     image: 'https://i.ibb.co/n8qvqscJ/Whats-App-Image-2026-05-02-at-2-24-02-PM-2.jpg',
   },
   {
     id: 30,
-    title: 'Professional Touch',
-    category: 'Salon',
+    title: 'Nail Design 30',
+    category: 'Salon Work',
     image: 'https://i.ibb.co/ktdQT8X/Whats-App-Image-2026-05-02-at-2-24-02-PM-3.jpg',
   },
   {
     id: 31,
-    title: 'Creative Beauty',
-    category: 'Art',
+    title: 'Nail Design 31',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/Y4cXjW06/Whats-App-Image-2026-05-02-at-2-24-02-PM-4.jpg',
   },
   {
     id: 32,
-    title: 'Luxe Design',
-    category: 'Luxury',
+    title: 'Nail Design 32',
+    category: 'Acrylic Nails',
     image: 'https://i.ibb.co/fdVXp7Nr/Whats-App-Image-2026-05-02-at-2-24-02-PM.jpg',
   },
   {
     id: 33,
-    title: 'Perfect Art',
-    category: 'Design',
+    title: 'Nail Design 33',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/MydcHLj4/Whats-App-Image-2026-05-02-at-2-24-03-PM-1.jpg',
   },
   {
     id: 34,
-    title: 'Gorgeous Collection',
-    category: 'Premium',
+    title: 'Nail Design 34',
+    category: 'Manicure',
     image: 'https://i.ibb.co/T5WcKN2/Whats-App-Image-2026-05-02-at-2-24-03-PM-2.jpg',
   },
   {
     id: 35,
-    title: 'Glam Collection',
-    category: 'Glam',
+    title: 'Nail Design 35',
+    category: 'Gel Nails',
     image: 'https://i.ibb.co/p5S31CR/Whats-App-Image-2026-05-02-at-2-24-03-PM-3.jpg',
   },
   {
     id: 36,
-    title: 'Excellence Service',
-    category: 'Salon',
+    title: 'Nail Design 36',
+    category: 'Salon Work',
     image: 'https://i.ibb.co/Z1HKVHgT/Whats-App-Image-2026-05-02-at-2-24-03-PM.jpg',
   },
   {
     id: 37,
-    title: 'Inspired Design',
-    category: 'Art',
+    title: 'Nail Design 37',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/WvXWPGLS/Whats-App-Image-2026-05-02-at-2-24-04-PM-1.jpg',
   },
   {
     id: 38,
-    title: 'Luxury Details',
-    category: 'Luxury',
+    title: 'Nail Design 38',
+    category: 'Acrylic Nails',
     image: 'https://i.ibb.co/twBDm9XX/Whats-App-Image-2026-05-02-at-2-24-04-PM.jpg',
   },
   {
     id: 39,
-    title: 'Beautiful Art',
-    category: 'Design',
+    title: 'Nail Design 39',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/27NWwzJr/Whats-App-Image-2026-05-02-at-2-23-51-PM-1.jpg',
   },
   {
     id: 40,
-    title: 'Premium Service',
-    category: 'Premium',
+    title: 'Nail Design 40',
+    category: 'Manicure',
     image: 'https://i.ibb.co/svnhLL3M/Whats-App-Image-2026-05-02-at-2-23-51-PM.jpg',
   },
   {
     id: 41,
-    title: 'Glamour Style',
-    category: 'Glam',
+    title: 'Nail Design 41',
+    category: 'Gel Nails',
     image: 'https://i.ibb.co/cS1dcktg/Whats-App-Image-2026-05-02-at-2-23-52-PM-1.jpg',
   },
   {
     id: 42,
-    title: 'Salon Expertise',
-    category: 'Salon',
+    title: 'Nail Design 42',
+    category: 'Salon Work',
     image: 'https://i.ibb.co/ycwxB8kB/Whats-App-Image-2026-05-02-at-2-23-52-PM-2.jpg',
   },
   {
     id: 43,
-    title: 'Artistic Creation',
-    category: 'Art',
+    title: 'Nail Design 43',
+    category: 'Nail Art',
     image: 'https://i.ibb.co/MxHCp80S/Whats-App-Image-2026-05-02-at-2-23-52-PM.jpg',
   },
   {
     id: 44,
-    title: 'Elegant Luxury',
-    category: 'Luxury',
+    title: 'Nail Design 44',
+    category: 'Acrylic Nails',
     image: 'https://i.ibb.co/rK2zPjcj/Whats-App-Image-2026-05-02-at-2-23-53-PM-1.jpg',
   },
 ];
@@ -309,22 +309,14 @@ export function Gallery() {
           >
             <img
               src={currentImage.image}
-              alt={currentImage.title}
+              alt="Gallery image"
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
 
             <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-              <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-                {currentImage.category}
-              </p>
-              <h3 className="mt-2 text-2xl font-semibold text-white">
-                {currentImage.title}
-              </h3>
-              <p className="mt-2 text-sm text-white/80">
-                Tap to view full image
-              </p>
+              <p className="text-sm text-white/80">Tap to view full image</p>
             </div>
 
             <button
@@ -367,7 +359,7 @@ export function Gallery() {
               >
                 <img
                   src={image.image}
-                  alt={image.title}
+                  alt="Gallery thumbnail"
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -393,19 +385,9 @@ export function Gallery() {
               <div className="overflow-hidden rounded-3xl bg-white/5 shadow-2xl ring-1 ring-white/10">
                 <img
                   src={selectedImageData?.image}
-                  alt={selectedImageData?.title}
+                  alt="Full view image"
                   className="mx-auto max-h-[70vh] w-full object-contain bg-black/20"
                 />
-              </div>
-
-              {/* Image info */}
-              <div className="mt-4 text-center text-white">
-                <h3 className="text-xl font-semibold">
-                  {selectedImageData?.title}
-                </h3>
-                <p className="text-white/70 mt-1 text-sm">
-                  {selectedImageData?.category}
-                </p>
               </div>
             </div>
           </div>
